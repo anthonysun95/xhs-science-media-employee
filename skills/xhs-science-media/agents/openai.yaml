@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书科学新媒体数字员工"
+  short_description: "自检核心技能并自动完成文献、标题审批与PNG/PDF成品交付"
+  default_prompt: "Use $xhs-science-media to research this topic, show five titles, and complete the selected Xiaohongshu package."
