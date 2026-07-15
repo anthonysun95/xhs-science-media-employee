@@ -1,21 +1,26 @@
 {
   "name": "xhs-science-media-employee",
-  "version": "0.2.0",
-  "description": "Self-checking, resumable Xiaohongshu new-media employee with bundled core skills, one title checkpoint, and automatic PNG/PDF delivery.",
+  "version": "0.3.0",
+  "description": "Audience-first, evidence-verified Xiaohongshu popular-science employee with one title checkpoint and automatic PNG/PDF delivery.",
   "author": {
     "name": "Local developer"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "小红书科学新媒体数字员工",
-    "shortDescription": "从选题自动完成文献、写作和图文交付",
-    "longDescription": "领导只需提供选题并从五个标题中选择一个。数字员工会先自检并补装五个核心技能，以XML优先、PDF次之的顺序获取论文，并用可恢复状态机自动完成文章、封面、图文卡片、逐页PNG、合并PDF和评论区钩子。",
+    "displayName": "小红书大众科普数字员工",
+    "shortDescription": "从读者问题出发，完成证据校验、写作与图文交付",
+    "longDescription": "领导只需提供选题并从五个标题中选择一个。数字员工先确定普通读者的问题、结论与行动，再检索正反证据校准事实范围，自动完成大众科普文章、生成式封面、纯文字正文卡、论文首页末页、逐页PNG、合并PDF和评论区钩子。",
     "developerName": "Local developer",
     "category": "Productivity",
-    "capabilities": ["Research", "Write", "Image", "Export"],
+    "capabilities": [
+      "Research",
+      "Write",
+      "Image",
+      "Export"
+    ],
     "defaultPrompt": [
-      "把这个选题做成有文献依据的小红书图文成品。",
-      "围绕这个选题先给我5个标题，选定后自动完成全部交付。"
+      "把这个选题做成面向普通读者、结论先行的小红书科普图文成品。",
+      "围绕这个选题先给我5个标题，选定后自动完成封面、纯文字正文卡和论文依据末页。"
     ],
     "brandColor": "#EF5547"
   }

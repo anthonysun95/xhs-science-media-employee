@@ -1,5 +1,17 @@
 # Evidence policy
 
+## Editorial role of evidence
+
+Start with the ordinary reader's decision problem, not with a paper. Define a provisional reader verdict and action hypothesis first; then search for evidence that supports, contradicts, narrows, or overturns it. Do not treat the verdict as a fact until verification is complete.
+
+Evidence has three jobs:
+
+1. prevent a false or overbroad verdict;
+2. make a useful verdict credible;
+3. supply one memorable reason the reader can understand.
+
+Evidence determines factual scope and safety, but it does not have to determine the article structure. The public-facing post is not a literature review, paper summary, or methods walkthrough. Keep detailed appraisal in `work/`; show readers the verified conclusion, consequence, explanation, action, and a compact evidence note.
+
 ## Source hierarchy
 
 Prefer sources in this order:
@@ -22,7 +34,20 @@ Choose one anchor paper that provides a concrete, audience-relevant result. Conf
 - publication year and journal;
 - whether a legal full-text XML or PDF is available.
 
-Do not select a paper merely because its title matches the topic. If no suitable paper exists, use the strongest authoritative source and explicitly weaken the claim.
+Treat the anchor paper as a traceable source, not the plot of the article. The reader verdict may be supported by converging papers, guidelines, or public-health guidance; the card sequence should follow reader understanding rather than the paper's section order.
+
+Do not select a paper merely because its title matches the topic. If no suitable paper exists, use the strongest authoritative source and revise the verdict to the strongest useful conclusion that source can support.
+
+## Certainty and wording ladder
+
+Use the highest justified level and write with the strongest truthful grammar:
+
+1. **Authoritative guidance or converging human outcome evidence:** use direct declarative or imperative wording within the supported population and conditions. Example: `高温会增加老年人的健康负担；该开空调就开。`
+2. **Consistent observational human evidence:** state the observed direction directly with risk/frequency language. Example: `长期暴露组的代谢异常更常见。` Do not add `可能` when `更常见` already expresses the correct scope.
+3. **Animal or mechanistic evidence:** use it to explain why a conclusion is plausible, clearly naming the experimental context once. Do not present it as a proven human outcome.
+4. **Single small or exploratory study:** do not let it carry an absolute headline alone. Pair it with stronger guidance or use it as supporting color.
+
+Do not scatter academic hedges through every paragraph. Put the principal conclusion first, then consolidate any material limitation into one plain boundary sentence or the final evidence card. Avoid false balance: when high-quality sources converge, state the practical conclusion clearly even if minor uncertainty remains.
 
 ## Full-text acquisition order
 
