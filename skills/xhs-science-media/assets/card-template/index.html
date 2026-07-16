@@ -3,36 +3,84 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>小红书图文卡片</title>
+    <title>小红书大众科普图文</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="gallery">
       <section class="page cover-page">
-        <img class="cover-visual" src="assets/cover-visual.png" alt="" />
+        <img class="cover-visual" src="assets/cover-visual.png" alt="按用户要求或默认方案制作的封面视觉" />
         <div class="cover-copy">
-          <p class="kicker">主题标签</p>
+          <p class="kicker">给普通读者的结论</p>
           <h1>替换为已选择的标题</h1>
+          <p class="cover-subtitle">可选：一句很短的补充说明</p>
         </div>
       </section>
 
-      <section class="page content-page">
+      <section class="page content-page short-page">
         <div class="page-number">02</div>
         <div class="content">
-          <p class="kicker">开场</p>
-          <h2>替换为原文中的核心句</h2>
+          <p class="kicker">先说结论</p>
+          <h2>替换为读者现在最该知道的一句话</h2>
           <div class="body-copy">
-            <p>替换为文章原文。根据内容复制这一页，保持每个 section.page 对应一张卡片。</p>
+            <p>用一到三段普通读者能直接看懂的文字说明，不先介绍论文和实验设计。</p>
+            <p>每段只承担一个意思，删掉不影响理解和行动的专业细节。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page content-page short-page">
+        <div class="page-number">03</div>
+        <div class="content">
+          <p class="kicker">跟你有什么关系</p>
+          <h2>替换为现实生活中的后果或收益</h2>
+          <div class="body-copy">
+            <p>从读者每天遇到的场景解释为什么这件事值得在意。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page content-page short-page">
+        <div class="page-number">04</div>
+        <div class="content">
+          <p class="kicker">常见误区</p>
+          <h2>替换为需要纠正的一个旧观念</h2>
+          <div class="body-copy">
+            <p>先说大家通常怎么想，再用简洁、坚定的语言说清楚为什么需要改。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page content-page short-page">
+        <div class="page-number">05</div>
+        <div class="content">
+          <p class="kicker">为什么</p>
+          <h2>替换为一个简单、准确的原因</h2>
+          <div class="body-copy">
+            <p>最多使用一个陌生科学词，并立刻用日常语言解释；不要罗列通路和实验步骤。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page content-page short-page">
+        <div class="page-number">06</div>
+        <div class="content">
+          <p class="kicker">现在怎么做</p>
+          <h2>替换为清楚、可执行的行动建议</h2>
+          <div class="body-copy">
+            <p>使用短句说明先做什么、注意什么，以及什么情况需要寻求专业帮助。</p>
           </div>
         </div>
       </section>
 
       <section class="page paper-page">
-        <div class="page-number">最后一页</div>
         <div class="paper-content">
           <p class="kicker">研究依据</p>
           <h2>替换为论文中文标题</h2>
-          <figure><img src="assets/anchor-paper-first-page.png" alt="论文首页" /></figure>
+          <figure>
+            <img class="anchor-paper-first-page" src="assets/anchor-paper-first-page.png" alt="论文首页截图" />
+          </figure>
+          <p class="source-line">可选：作者、期刊、年份与 DOI，控制在两行以内。</p>
         </div>
       </section>
     </main>
