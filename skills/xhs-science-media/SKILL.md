@@ -1,6 +1,6 @@
 ---
 name: xhs-science-media
-description: "Turn one topic into a research-backed Xiaohongshu publishing package through a resumable digital-employee workflow. Before work, verify and install the five bundled core skills. Research an anchor paper, prefer XML full text then PDF, show exactly five titles as the only planned leader checkpoint, then autonomously write, humanize, generate a cover, build 3:4 HTML/CSS cards, export one PNG per card plus a combined PDF, and deliver a separate comment hook. Trigger for 小红书选题、科研科普、文献支撑内容、新媒体数字员工、图文卡片、PNG/PDF成品 or end-to-end social content production."
+description: "Turn one topic into an audience-first, decision-led, evidence-verified Xiaohongshu popular-science publishing package through a resumable digital-employee workflow. Define the ordinary reader's problem, useful provisional verdict, and action first; then search supporting and disconfirming evidence to set the truthful claim scope without turning the post into a paper review. Before work, verify the five bundled core skills; show exactly five titles as the only planned leader checkpoint; then autonomously write, humanize, generate a cover, build 3:4 HTML/CSS cards, export PNG/PDF deliverables, and create a separate comment hook. Trigger for 小红书选题、普通读者科普、科研科普、文献支撑内容、新媒体数字员工、图文卡片、PNG/PDF成品 or end-to-end social content production."
 ---
 
 # Xiaohongshu science media employee
@@ -17,6 +17,27 @@ Use exactly one planned leader checkpoint:
 4. After selection, finish every deliverable without requesting outline, draft, visual, or export approval.
 
 An additional leader request is allowed only for a true blocker. In particular, if neither XML nor PDF full text can be obtained legally, ask the leader to upload the article. Permission prompts required by the current operating system are operational permissions, not creative approvals.
+
+## Audience-first editorial doctrine
+
+Write for an ordinary reader making a real-life decision, not for a researcher reviewing a paper.
+
+1. Define the **provisional reader verdict** first: one plain, useful sentence stating what the reader may need to believe or do after reading. Treat it as a hypothesis until evidence verification is complete.
+2. Define the **reader payoff**: what risk, mistake, cost, symptom, or missed opportunity this verdict helps them avoid.
+3. Search for supporting and disconfirming evidence to verify, strengthen, qualify, or falsify that verdict. Evidence controls factual scope, but it does not have to become the narrative outline.
+4. If the intended verdict is not supportable, revise it to the strongest useful conclusion that is supportable. Do not fill the article with caveats to preserve a weak angle.
+5. Lead with the conclusion and practical consequence. Put methods, sample details, pathways, and limitations later, and include only what helps the reader understand or trust the conclusion.
+
+Use the strongest truthful grammar:
+
+- State robust population-level findings and authoritative recommendations directly.
+- Use imperatives for practical actions supported by current guidance: `该开空调就开`, not `或许可以考虑开空调`.
+- Do not weaken every sentence with `可能`, `或许`, `提示`, `一定程度上`, or `尚需更多研究`. Consolidate material uncertainty into one clear boundary sentence or the evidence card.
+- A direct statement about group-level risk is not a guarantee about every individual. Keep that distinction internally and disclose it once when material.
+- Never use `一定`, `百分百`, `治愈`, `保证`, or `人人都会` unless the source literally supports that scope.
+- Never make a human causal claim from animal or observational evidence alone. Assertive delivery does not change the evidence level.
+
+The final copy should feel decisive because the conclusion is well chosen and well supported, not because uncertainty was hidden.
 
 At the start, read:
 
@@ -37,11 +58,11 @@ At the start, read:
 
 Transition through `researching`, `acquiring_source`, and `preparing_titles` as defined by the state machine. Keep internal analysis in `work/`; do not expose it to the leader.
 
-1. Convert the topic into a specific audience problem and content promise.
-2. Search current primary literature and authoritative guidance. Select one anchor paper whose result can carry the article. Save its URL, citation, result, limitations, and source availability in `work/source-ledger.md`.
+1. Convert the topic into a specific audience problem. Write a provisional reader verdict, reader payoff, and desired action in `work/content-brief.md` before searching for a paper.
+2. Search current primary literature and authoritative guidance around that verdict. Look for support, contradiction, boundary conditions, and the most decision-relevant result. Select one anchor paper as the strongest visible receipt, not as the article outline. Save its URL, citation, result, limitations, and source availability in `work/source-ledger.md`.
 3. Acquire the legal full text using this strict order: XML first, PDF second. If neither is obtainable, transition to `waiting_for_source_upload`, give the leader the exact paper citation/DOI, and ask them to upload the article. Resume from the uploaded file without repeating research.
-4. Use `dbs-content` to define audience tension, useful stance, evidence-to-popularization ratio, content spine, and avoidable claims. Save the diagnosis in `work/content-diagnosis.md`.
-5. Use `dbs-xhs-title` to generate exactly five genuinely distinct, supportable titles. Every title must retain its source formula number in the internal file, cover at least three trigger types across the set, and stay within the platform title-length rule.
+4. Use `dbs-content` to finalize the reader verdict, audience tension, useful stance, action, conviction ladder, evidence-to-popularization ratio, content spine, and avoidable claims. Save the diagnosis in `work/content-diagnosis.md`.
+5. Use `dbs-xhs-title` to generate exactly five genuinely distinct, supportable titles. Prefer a direct warning, benefit, mistake, or action over `某研究发现` or a journal-led title. Every title must retain its source formula number in the internal file, cover at least three trigger types across the set, and stay within the platform title-length rule.
 6. Save the titles and formula traceability in `work/title-candidates.md`, transition to `waiting_for_title`, and reply using only this form:
 
 ```text
@@ -62,21 +83,34 @@ Record the selected title in `work/selected-title.md` and the state file, transi
 
 ### Write the article
 
-Use the chosen title verbatim. Default to roughly 20% science and 80% clear popular explanation unless the topic requires a stricter balance.
+Use the chosen title verbatim. Default to roughly 10-15% science and 85-90% plain-language explanation, consequence, and action. Scientific detail earns space only when it makes the conclusion easier to understand, remember, or trust.
 
 Use this content spine:
 
 1. Title
-2. Opening that names the audience situation
-3. What the evidence says
-4. What the reader should do
-5. Conclusion
+2. Immediate reader verdict
+3. Why this matters in ordinary life
+4. The common belief or behavior that needs correcting
+5. One simple explanation of why the result makes sense
+6. What the reader should do now
+7. Compact evidence receipt and one material boundary
 
 Keep the comment hook separate from the card deck. Save one strong final hook in `deliverables/comment-hook.md`.
 
 Use `content-research-writer` for the cited draft. Then use `dbs-resonate`: extract all claims, choose one core mechanism, run the five-dimensional resonance diagnosis, and revise weak or competing passages. Finally use `humanizer-zh` to remove AI phrasing while preserving meaning, citations, risk warnings, uncertainty, and the selected title. Save the publication copy to `work/article.md`.
 
-Never upgrade association into causation or a probabilistic result into a guarantee.
+Do not write like a paper abstract or organize the article by study methods. Avoid jargon, abbreviations, pathway inventories, and sample-detail dumps unless they directly increase reader understanding.
+
+Never upgrade association into causation or a probabilistic result into a guarantee. In reader-facing copy, prefer direct outcome language that matches the evidence level, and state the material boundary once instead of hedging every paragraph.
+
+Before layout, run the ordinary-reader test:
+
+- The first two cards reveal the practical conclusion without requiring study context.
+- Each card has one takeaway that can be repeated in one sentence.
+- Use no more than one unfamiliar scientific term per card; explain it immediately in ordinary language.
+- Replace pathway lists and experimental chronology with one accurate analogy or short cause-and-effect chain when explanation is needed.
+- Keep numbers only when they make the size, urgency, or credibility of the result clearer.
+- Remove any paragraph that mainly proves the writer read the paper but does not help the reader decide, understand, remember, or act.
 
 ### Prepare visual sources
 
@@ -86,7 +120,9 @@ Use the acquired anchor source:
 - PDF: retain `work/assets/anchor-paper.pdf`; render page 1 into `work/assets/anchor-paper-first-page.png`.
 - Human upload: preserve the uploaded original and apply the XML or PDF path above according to its format.
 
-Create an original 3:4 cover visual. Prefer imagery without text, then overlay the exact selected title in HTML/CSS so Chinese typography stays correct. Do not add brands, watermarks, unsupported medical claims, or unrelated products.
+Create one original 3:4 cover visual and save it as `work/assets/cover-visual.png`. Generate the image without text and deliberately reserve negative space around the intended title position. Compose the visual subject, light, color, and empty space for the selected title rather than placing an unrelated picture behind a title box. Copy the image to `web/assets/cover-visual.png`, then overlay the exact selected title in HTML/CSS so Chinese typography stays correct.
+
+Make the cover title large, high-contrast, and immediately readable at feed size. Use a cover-specific title size of at least `8cqw` or `96px` on a 1200px-wide canvas. Integrate the title with the image through placement, gradient, shadow, or color echo; do not shrink it into a generic information card. Do not add brands, watermarks, unsupported medical claims, or unrelated products.
 
 ### Build the card deck
 
@@ -98,8 +134,12 @@ Follow these invariants:
 - Use a 3:4 canvas with a canonical export size of 1200x1600.
 - Preserve the approved article wording while splitting it across cards.
 - Use 7-10 cards unless content density requires another count.
-- Put the cover first.
-- Put the anchor-paper first-page image last, with a concise Chinese title.
+- Make card 1 a `cover-page` containing the generated `cover-visual`, the exact selected title in one `h1`, and at most one short kicker or subtitle. Do not put article paragraphs, charts, study screenshots, or evidence boxes on the cover.
+- Make cards 2 through the penultimate card `content-page` text cards. Each card uses one plain-language `h2` and 1-3 short paragraphs; it may use a small kicker, page number, or one simple emphasis line. Do not use photos, generated images, paper screenshots, illustrations, diagrams, tables, multi-column dashboards, icon grids, SVG, or canvas elements on body cards.
+- Make card 2 deliver the bottom line immediately. Do not make readers wait through background or study design before learning the result.
+- Let each body card answer one ordinary-reader question: `跟我有什么关系？`, `为什么？`, or `现在怎么做？`.
+- Make the final card a simple `paper-page`: one concise Chinese `h2`, one faithful anchor-paper first-page screenshot, and optionally 1-2 short source lines. Do not add a long conclusion, mechanism recap, decorative infographic, or extra image.
+- Use no generated imagery after card 1. The anchor-paper screenshot on the final card is the only required non-text visual after the cover.
 - Do not create a comment-hook card.
 - Keep all images local and make the page printable without network access.
 
@@ -113,7 +153,9 @@ If the generic exporter cannot run because this operating system exposes differe
 - one combined PDF with the same page order;
 - the static screenshot webpage.
 
-Transition to `validating`, run `scripts/validate_deliverables.py <project-folder>`, and fix all failures before delivery. Keep the current validator behavior unchanged unless the leader explicitly asks to strengthen it. Inspect a contact sheet or representative full-size pages for overflow, missing assets, inaccurate text, and unreadable paper imagery.
+Transition to `validating`, run `scripts/validate_deliverables.py <project-folder>`, and fix all failures before delivery. The validator must enforce the three card roles above: generated-image cover with a large `h1`, text-only body cards, and a simple final paper card with a Chinese `h2` and the anchor first-page image.
+
+Inspect a contact sheet and the full-size first, second, and final cards. Reject the package if the cover title is not dominant or does not visually integrate with the image, if any body card looks like a dashboard or infographic, or if the final paper screenshot is too small to recognize as the source article.
 
 Transition to `complete` only after every required artifact exists and validation passes.
 
