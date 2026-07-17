@@ -10,7 +10,7 @@ Evidence has three jobs:
 2. make a useful verdict credible;
 3. supply one memorable reason the reader can understand.
 
-Evidence determines factual scope and safety, but it does not have to determine the article structure. The public-facing post is not a literature review, paper summary, or methods walkthrough. Keep detailed appraisal in `work/`; show readers the verified conclusion, consequence, explanation, action, and a compact evidence note.
+Evidence determines factual scope and safety, but it does not have to determine the paper's section order as the article structure. When the leader provides an anchor paper, its central question and conclusion remain the narrative spine. Use roughly 30% of the post to establish what the paper compared, found, and could support, then use roughly 70% for guideline-supported practical interpretation and action. Keep detailed appraisal in `work/`.
 
 ## Source hierarchy
 
@@ -34,7 +34,7 @@ Choose one anchor paper that provides a concrete, audience-relevant result. Conf
 - publication year and journal;
 - whether a legal full-text XML or PDF is available.
 
-Treat the anchor paper as a traceable source, not the plot of the article. The reader verdict may be supported by converging papers, guidelines, or public-health guidance; the card sequence should follow reader understanding rather than the paper's section order.
+Treat the anchor paper as both the traceable source and the source of the central question. The card sequence should follow reader understanding rather than the paper's section order, but it must not drift into an adjacent topic that the title paper did not answer. Use converging papers, guidelines, or public-health guidance mainly to interpret the result and make the action section useful.
 
 Do not select a paper merely because its title matches the topic. If no suitable paper exists, use the strongest authoritative source and revise the verdict to the strongest useful conclusion that source can support.
 

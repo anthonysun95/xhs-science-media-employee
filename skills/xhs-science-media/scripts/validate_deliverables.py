@@ -152,26 +152,30 @@ def validate_card_roles(root: Path, html_path: Path, html: str) -> tuple[list[st
     cover = pages[0]
     if "cover-page" not in cover["classes"]:
         errors.append("Card 1 must have class cover-page")
-    if len(cover["images"]) != 1:
-        errors.append("Card 1 must contain exactly one generated cover image")
+    text_only_cover = "cover-text-only" in cover["classes"]
+    if text_only_cover:
+        if cover["images"]:
+            errors.append("Card 1 text-only cover must not contain an image")
+    elif len(cover["images"]) != 1:
+        errors.append("Card 1 image-mode cover must contain exactly one local cover visual")
     else:
         image = cover["images"][0]
         if "cover-visual" not in image["classes"]:
             errors.append("Card 1 image must have class cover-visual")
         if "cover-visual" not in Path(image["src"]).stem:
-            errors.append("Card 1 image file must be the generated cover-visual asset")
+            errors.append("Card 1 image file must use the resolved cover-visual asset")
     h1_texts = [text for text in cover["h1"] if text]
     if len(h1_texts) != 1:
         errors.append("Card 1 must contain exactly one non-empty h1 title")
     selected_title = read_selected_title(root / "work" / "selected-title.md")
     if selected_title and h1_texts and normalized_text([selected_title]) != normalized_text([h1_texts[0]]):
         errors.append("Card 1 h1 does not match work/selected-title.md")
-    if not cover_title_is_large(css):
+    if not cover_title_is_large(css) and "cover-title-compact" not in cover["classes"]:
         errors.append("Cover h1 font-size must be at least 8cqw or 96px")
-    if not all(token in css for token in (".cover-visual", ".cover-copy")):
-        errors.append("Cover CSS must style both .cover-visual and .cover-copy")
-    if not re.search(r"linear-gradient|text-shadow|mix-blend-mode|filter\s*:", css, flags=re.I):
-        errors.append("Cover CSS must integrate title and image with contrast treatment")
+    if ".cover-copy" not in css:
+        errors.append("Cover CSS must style .cover-copy")
+    if not text_only_cover and ".cover-visual" not in css:
+        errors.append("Image-mode cover CSS must style .cover-visual")
 
     for index, page in enumerate(pages[1:-1], start=2):
         if "content-page" not in page["classes"]:
@@ -215,9 +219,13 @@ def validate(root: Path) -> list[str]:
     png_dir = root / "deliverables" / "png"
     pdf_path = root / "deliverables" / "xiaohongshu-cards.pdf"
     hook_path = root / "deliverables" / "comment-hook.md"
+    cover_brief_path = root / "work" / "cover-brief.md"
 
     if not html_path.exists():
         return ["Missing web/index.html"]
+
+    if not cover_brief_path.exists() or not cover_brief_path.read_text(encoding="utf-8").strip():
+        errors.append("Missing or empty work/cover-brief.md")
 
     html = html_path.read_text(encoding="utf-8")
     if re.search(r"<script\b", html, flags=re.I):

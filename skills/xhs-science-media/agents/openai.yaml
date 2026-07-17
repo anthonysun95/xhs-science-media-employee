@@ -1,4 +1,4 @@
 interface:
   display_name: "小红书大众科普数字员工"
-  short_description: "从读者问题和行动出发，经证据校验后交付小红书图文、PNG和PDF"
-  default_prompt: "Use $xhs-science-media to turn this topic into an audience-first, decision-led, evidence-verified Xiaohongshu popular-science package."
+  short_description: "按用户封面要求制作舒展易读的科普图文、PNG和PDF"
+  default_prompt: "Use $xhs-science-media to create an evidence-verified Xiaohongshu science package with my cover requirements and readable card layout."
