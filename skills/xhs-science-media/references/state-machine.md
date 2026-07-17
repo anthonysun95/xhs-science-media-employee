@@ -6,13 +6,13 @@ Store machine-readable state in `<project>/work/status.json`. Use `scripts/proje
 
 | State | Meaning | Required next action |
 |---|---|---|
-| `bootstrapping` | Project exists; core skills are being checked. | Finish the five-skill preflight. |
+| `bootstrapping` | Project exists; core skills are being checked. | Finish the four-skill preflight. |
 | `researching` | Audience problem and candidate literature are being researched. | Select an anchor paper and record the source ledger. |
 | `acquiring_source` | The anchor paper is selected; legal full text is being obtained. | Try XML, then PDF. |
 | `waiting_for_source_upload` | XML and PDF are both unavailable. | Ask the leader for the exact paper and wait. |
 | `preparing_titles` | Evidence is secured; five titles are being generated. | Save five traceable candidates. |
 | `waiting_for_title` | The five-title checkpoint has been shown. | Accept 1-5 or a replacement title. |
-| `producing` | Article, resonance pass, humanization, hook, and visual sources are being completed. | Finish publication copy and assets. |
+| `producing` | Article, terminology lock, resonance pass, humanization, hook, and visual sources are being completed. | Finish publication copy and assets. |
 | `rendering` | Static cards and exports are being produced. | Create HTML/CSS, PNGs, and PDF. |
 | `validating` | Automated and visual checks are running. | Fix failures or mark complete. |
 | `complete` | Every required deliverable exists and validation passed. | Hand off the final links and hook. |
@@ -48,6 +48,7 @@ any active state -> blocked
 4. In `waiting_for_source_upload`, inspect a newly supplied file, preserve it in `work/assets/`, record its format, and transition back to `acquiring_source`.
 5. In `rendering` or `validating`, reuse existing correct files and regenerate only missing or failing artifacts.
 6. Do not overwrite a `complete` project unless the leader explicitly requests a revision.
+7. For a copy-only revision, keep research and assets valid; invalidate only the affected copy plus downstream layout/export artifacts.
 
 ## Minimum state fields
 
