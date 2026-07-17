@@ -1,16 +1,26 @@
 {
   "name": "xhs-science-media-employee",
-  "version": "0.3.0",
-  "description": "Audience-first, evidence-verified Xiaohongshu popular-science employee with one title checkpoint and automatic PNG/PDF delivery.",
+  "version": "0.4.0",
+  "description": "Audience-first, evidence-verified Xiaohongshu science workflow with three approval checkpoints, resumable production, and validated PNG/PDF delivery.",
   "author": {
-    "name": "Local developer"
+    "name": "anthonysun95",
+    "email": "yuantongsun@gmail.com",
+    "url": "https://github.com/anthonysun95"
   },
+  "homepage": "https://github.com/anthonysun95/xhs-science-media-employee#readme",
+  "repository": "https://github.com/anthonysun95/xhs-science-media-employee",
+  "keywords": [
+    "xiaohongshu",
+    "science-communication",
+    "evidence-based-writing",
+    "content-production"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "小红书大众科普数字员工",
-    "shortDescription": "从读者问题出发，完成证据校验、写作与图文交付",
-    "longDescription": "领导只需提供选题并从五个标题中选择一个。数字员工先确定普通读者的问题、结论与行动，再检索正反证据校准事实范围，自动完成大众科普文章、生成式封面、纯文字正文卡、论文首页末页、逐页PNG、合并PDF和评论区钩子。",
-    "developerName": "Local developer",
+    "shortDescription": "让普通人一次听懂的循证科普图文工作流",
+    "longDescription": "从普通读者的问题、结论和行动出发，用原始论文与权威指南校准事实边界。通过标题选择、完整文案确认和封面方向三次节点，完成每页120—150字的纯文字正文卡、用户定向封面、论文依据末页、逐页PNG、合并PDF和评论区钩子；中断后可从未完成步骤继续。",
+    "developerName": "anthonysun95",
     "category": "Productivity",
     "capabilities": [
       "Research",
@@ -18,9 +28,11 @@
       "Image",
       "Export"
     ],
+    "websiteURL": "https://github.com/anthonysun95/xhs-science-media-employee",
     "defaultPrompt": [
-      "把这个选题做成面向普通读者、结论先行的小红书科普图文成品。",
-      "围绕这个选题先给我5个标题，选定后自动完成封面、纯文字正文卡和论文依据末页。"
+      "把这个选题做成让普通人一次听懂的小红书科普成品。",
+      "先给我5个标题，选定后提交完整文案，再按我的封面参考完成PNG和PDF。",
+      "从上次中断的位置继续这个小红书科普项目，不要重复已完成步骤。"
     ],
     "brandColor": "#EF5547"
   }
